@@ -2,9 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Calculator" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MyApplication/never_game_android" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/android_loans_24" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/never_game_android" vcs="Git" />
   </component>
 </project>
