@@ -1,6 +1,7 @@
 package com.ogrvassiem.myfilms.ui.destinations.mainScreen
 
 import android.util.Log
+import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ogrvassiem.myfilms.aplication.rest.TopicsRepository
@@ -19,6 +20,9 @@ class MainScreenViewModel @Inject constructor(
     private val _categoryInfo = MutableStateFlow<List<TopicsResponse.Topic>?>(null)
     val categoryInfo: StateFlow<List<TopicsResponse.Topic>?> = _categoryInfo.asStateFlow()
 
+    private val _selectedCategories = mutableStateListOf<String>()
+    val selectedCategories: List<String> = _selectedCategories
+
     init {
         getMovies()
     }
@@ -34,6 +38,14 @@ class MainScreenViewModel @Inject constructor(
                 _categoryInfo.value = null
                 Log.d("MainViewModel", "Error loading topics: ${result.exceptionOrNull()?.message}")
             }
+        }
+    }
+
+    fun toggleCategory(categoryName: String) {
+        if (_selectedCategories.contains(categoryName)) {
+            _selectedCategories.remove(categoryName) // Удаляет категорию, если она уже есть в списке
+        } else {
+            _selectedCategories.add(categoryName) // Добавляет категорию, если её нет в списке
         }
     }
 

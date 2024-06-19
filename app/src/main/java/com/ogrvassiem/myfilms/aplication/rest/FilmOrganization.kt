@@ -9,8 +9,7 @@ data class TopicsResponse(
         val image: String,
         val freeTopic: Boolean,
         val storeID: String,
-        val description: String,
-        val overviewText: String,
+        val quantity: Int,
         val content: List<Map<String, List<Film>>>
     )
 

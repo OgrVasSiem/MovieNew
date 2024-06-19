@@ -77,6 +77,7 @@ dependencies {
     implementation(libs.androidx.datastore)
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.androidx.ads.adservices)
+    implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -87,6 +88,8 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
     coreLibraryDesugaring(libs.desugar.jdk.libs)
+
+    implementation(libs.constraintlayout.compose)
 
     //Navigation
     implementation(libs.raamcosta.compose.destinations.animations.core)

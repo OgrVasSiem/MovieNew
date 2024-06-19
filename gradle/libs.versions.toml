@@ -24,7 +24,8 @@ retrofit = "2.11.0"
 moshi = "1.15.1"
 googleServicesVersion = "4.4.2"
 adsAdservices = "1.1.0-beta07"
-
+constraintlayout = "2.1.4"
+constraintlayout-compose = "1.0.1"
 
 [libraries]
 #core
@@ -83,6 +84,9 @@ coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coi
 androidx-datastore = { group = "androidx.datastore", name = "datastore", version = "1.1.1" }
 androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version = "1.1.1" }
 androidx-ads-adservices = { group = "androidx.privacysandbox.ads", name = "ads-adservices", version.ref = "adsAdservices" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+constraintlayout-compose = { group = "androidx.constraintlayout", name = "constraintlayout-compose", version.ref = "constraintlayout-compose" }
+
 
 
 [plugins]
