@@ -70,6 +70,8 @@ fun CardStack(
                     targetValue = when (cardIndex) {
                         0 -> 1f
                         1 -> 0.85f
+                        2 -> 0.65f
+                        3 -> 0.45f
                         else -> 1f
                     },
                     label = "scaleAnimation"

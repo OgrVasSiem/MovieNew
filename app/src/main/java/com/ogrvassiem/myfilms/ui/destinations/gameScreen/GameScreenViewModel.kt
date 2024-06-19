@@ -54,8 +54,8 @@ class GameScreenViewModel @Inject constructor(
             .flatMap { it.values }
             .flatten()
         _films.value = films
-        _displayedFilms.value = films.take(2)
-        updateOffsets(2)
+        _displayedFilms.value = films.take(4)
+        updateOffsets(4)
     }
 
     fun onSwipeLeft() {
@@ -96,7 +96,7 @@ class GameScreenViewModel @Inject constructor(
     }
 
     private fun updateOffsets(size: Int) {
-        val baseOffsets = listOf(0.dp, 40.dp)
-        _offsets.value = List(size) { i -> mutableStateOf(baseOffsets.getOrElse(i) { 40.dp }) }
+        val baseOffsets = listOf(0.dp, (-60).dp, (-90).dp, (-120).dp)
+        _offsets.value = List(size) { i -> mutableStateOf(baseOffsets.getOrElse(i) { 0.dp }) }
     }
 }
